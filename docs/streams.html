@@ -2,37 +2,22 @@
 <html lang="ko" data-theme="dark">
   <head>
     <meta charset="UTF-8">
-    <title>UCHIVE
-    </title>
+    <title>UCHIVE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="/pico.min.css">
   </head>
   <body style="overflow-y: scroll;">
     <header class="container">
       <hgroup>
-        <h1>UCHIVE
-        </h1>
-        <h2>그 방송에서 무슨 일이!?
-        </h2>
+        <h1>UCHIVE</h1>
+        <h2>그 방송에서 무슨 일이!?</h2>
       </hgroup>
       <nav>
         <ul>
-          <li>
-            <a href="/">처음으로
-            </a>
-          </li>
-          <li>
-            <a href="/streams.html">방송목록
-            </a>
-          </li>
-          <li>
-            <a href="/dances.html">춤목록
-            </a>
-          </li>
-          <li>
-            <a href="/sings.html">노래목록
-            </a>
-          </li>
+          <li><a href="처음으로">/</a></li>
+          <li><a href="방송목록">/streams.html</a></li>
+          <li><a href="춤목록">/dances.html</a></li>
+          <li><a href="노래목록">/sings.html</a></li>
         </ul>
       </nav>
     </header>
@@ -44,6 +29,7 @@
       </section>
       <section>
         <ul class="searchable">
+          <li class="searchable-item" data-search="2023년 8월 16일, 착시게임 대기방~! 잠깐 수다떨자잉 [뷰파인더]"><a href="/stream/xdt1zydwofdtdj7.html">2023년 8월 16일 19시 59분부터, 4시간 45분 동안</a></li>
           <li class="searchable-item" data-search="2023년 8월 14일, 저 오늘 귀여움 반박ㄱ"><a href="/stream/n7ko56m17hil319.html">2023년 8월 14일 19시 59분부터, 4시간 50분 동안</a></li>
           <li class="searchable-item" data-search="2023년 8월 12일, 이따 진짜 잼난거 보여드림!! 일단 밥좀 먹고 냠냠"><a href="/stream/wkc6uxbtfa8523a.html">2023년 8월 12일 12시 15분부터, 5시간 31분 동안</a></li>
           <li class="searchable-item" data-search="2023년 8월 10일, 시참 이어그리기 대기방!!!ㅣ갈틱폰"><a href="/stream/tn7ra9yl01ful1b.html">2023년 8월 10일 20시부터, 4시간 35분 동안</a></li>
@@ -68,23 +54,24 @@
         </ul>
       </section>
     </main>
-    <footer class="container">:)
+    <footer class="container">
+      :)
     </footer>
-    <script>
-      ;(function search () {
-          ;[...document.querySelectorAll('.searchable')].forEach(makeSearchable)
-          function makeSearchable ($searchable) {
-              const $searchableItems = [...$searchable.querySelectorAll('.searchable-item')]
-              const $search = document.querySelector('.search')
-              $search.addEventListener('keyup', (e) => {
-                  $searchableItems.forEach(function ($el) {
-                      const text = $el.getAttribute('data-search') || $el.innerText
-                      const show = new RegExp(e.target.value, 'i').test(text)
-                      $el.style.display = show ? '' : 'none'
-                  })
-              })
-          }
-      })()
-    </script>
   </body>
 </html>
+<script>
+  ;(function search () {
+      ;[...document.querySelectorAll('.searchable')].forEach(makeSearchable)
+      function makeSearchable ($searchable) {
+          const $searchableItems = [...$searchable.querySelectorAll('.searchable-item')]
+          const $search = document.querySelector('.search')
+          $search.addEventListener('keyup', (e) => {
+              $searchableItems.forEach(function ($el) {
+                  const text = $el.getAttribute('data-search') || $el.innerText
+                  const show = new RegExp(e.target.value, 'i').test(text)
+                  $el.style.display = show ? '' : 'none'
+              })
+          })
+      }
+  })()
+</script>
